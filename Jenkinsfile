@@ -3,11 +3,15 @@ pipeline {
 
     stages {
         stage ('Compile Stage') {
-            sh './gradlew clean build'
-        }
+            steps {
+                sh './gradlew clean build'
+            }
 
         stage ('Testing Stage') {
-            sh './gradlew test'
+
+            steps {
+                sh 'gradlew test'
+            }
         }
     }
 }
