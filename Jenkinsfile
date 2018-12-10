@@ -14,14 +14,9 @@ pipeline {
         stage ('Testing Stage') {
 
             steps {
-
-            }
-        }
-
-
-        stage ('Deployment Stage') {
-            steps {
-
+                withGradle(gradle : 'gradle 4.10.3') {
+                    sh 'gradlew test'
+                }
             }
         }
     }
