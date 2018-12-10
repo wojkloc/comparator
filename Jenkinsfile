@@ -3,21 +3,11 @@ pipeline {
 
     stages {
         stage ('Compile Stage') {
-
-            steps {
-                withGradle(gradle : 'gradle 4.10.3') {
-                    sh 'gradlew build'
-                }
-            }
+            sh './gradlew clean build'
         }
 
         stage ('Testing Stage') {
-
-            steps {
-                withGradle(gradle : 'gradle 4.10.3') {
-                    sh 'gradlew test'
-                }
-            }
+            sh './gradlew test'
         }
     }
 }
