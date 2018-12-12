@@ -5,7 +5,7 @@ pipeline {
         stage ('Compile Stage') {
             steps {
                 sh 'sudo chmod +x gradlew'
-                sh 'sudo ./gradlew clean build --info'
+                sh 'sudo ./gradlew clean build'
             }
         }
 
