@@ -4,14 +4,14 @@ pipeline {
     stages {
         stage ('Compile Stage') {
             steps {
-                sh './gradlew clean build'
+                sh 'sudo ./gradlew clean build -s'
             }
         }
 
         stage ('Testing Stage') {
 
             steps {
-                sh 'gradlew test'
+                sh 'sudo ./gradlew test -s'
             }
         }
     }
