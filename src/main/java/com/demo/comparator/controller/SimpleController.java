@@ -12,6 +12,7 @@ public class SimpleController {
 
     @GetMapping("/hello")
     public ResponseEntity<String> sayHello() {
+        //this is controller
         HttpHeaders responseHeaders = new HttpHeaders();
         return ResponseEntity.ok().headers(responseHeaders).body("Hello World!");
     }
